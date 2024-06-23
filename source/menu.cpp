@@ -4,6 +4,7 @@
 #include <SDL_ttf.h>
 #include <vector>
 #include <iostream>
+#include <filesystem>
 
 #include "Menu.hpp"
 #include "Math.hpp"
@@ -11,10 +12,12 @@
 #include "Cursor.hpp"
 #include "Input.hpp"
 
+namespace fs = std::filesystem;
+
 SDL_Point getsize(SDL_Texture* texture) {
-	SDL_Point size;
-	SDL_QueryTexture(texture, NULL, NULL, &size.x, &size.y);
-	return size;
+    SDL_Point size;
+    SDL_QueryTexture(texture, NULL, NULL, &size.x, &size.y);
+    return size;
 }
 
 Menu::Menu(RenderWindow pWindow)
@@ -22,7 +25,13 @@ Menu::Menu(RenderWindow pWindow)
     window = pWindow;
     std::cout << "1\n";
 
-    //Create texture
+    // Create the directory
+    fs::path dir = "/switch/Payload Rebooted";
+    if (!fs::exists(dir)) {
+        fs::create_directories(dir);
+    }
+
+    // Create texture
     tTitle = window.loadString("PayloadReboot");
     chdir("romfs:/");
     tExit = window.loadTexture("gfx/exit.png");
@@ -32,7 +41,7 @@ Menu::Menu(RenderWindow pWindow)
     tLockpick = window.loadTexture("gfx/lockpick.png");
     tUdpih = window.loadTexture("gfx/udpih.png");
 
-    //Create rect
+    // Create rect
     /*rectHekate = { 107, 0, 258, 258};
     rectHekate.y = vertical / 2 - rectHekate.w / 2 - 20;
 
