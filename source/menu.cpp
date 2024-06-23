@@ -129,15 +129,18 @@ void Menu::printAbout(){
     size = getsize(tSciresM);
     vEntity.push_back(Entity(Vector2f(340, 230), tSciresM, size.x, size.y , 0, 0));
     size = getsize(tCTCaer);
-    vEntity.push_back(Entity(Vector2f(340, 260), tCTCaer, size.x, size.y , 0, 0));
+    vEntity.push_back(Entity(Vector2f(340, 260), tBradley, size.x, size.y , 0, 0));
+    size = getsize(tBradley);
+    vEntity.push_back(Entity(Vector2f(340, 290), tCTCaer, size.x, size.y , 0, 0));
     size = getsize(tshchmue);
-    vEntity.push_back(Entity(Vector2f(340, 290), tshchmue, size.x, size.y , 0, 0));
+    vEntity.push_back(Entity(Vector2f(340, 320), tshchmue, size.x, size.y , 0, 0));
     size = getsize(tGary);
-    vEntity.push_back(Entity(Vector2f(340, 320), tGary, size.x, size.y , 0, 0));
+    vEntity.push_back(Entity(Vector2f(340, 410), tGary, size.x, size.y , 0, 0));
     size = getsize(tpressA);
-    vEntity.push_back(Entity(Vector2f(340, 410), tpressA, size.x, size.y , 0, 0));
+    vEntity.push_back(Entity(Vector2f(340, 350), tpressA, size.x, size.y , 0, 0));
     size = getsize(tPolo);
-    vEntity.push_back(Entity(Vector2f(340, 350), tPolo, size.x, size.y , 0, 0));
+    vEntity.push_back(Entity(Vector2f(340, 380), tPolo, size.x, size.y , 0, 0));
+    
 
     for (auto i : vEntity){
             window.render(i, 1);
@@ -148,7 +151,8 @@ void Menu::printAbout(){
     while (isOpen){
         while (SDL_PollEvent(&eventAbout)){
             if (eventAbout.type == SDL_JOYBUTTONDOWN){
-                if (eventAbout.jbutton.button == 0) //button A
+                if (ev
+                    entAbout.jbutton.button == 0) //button A
                 {
                     return;
                 }
