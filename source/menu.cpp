@@ -39,7 +39,7 @@ Menu::Menu(RenderWindow pWindow)
     tHekate = window.loadTexture("gfx/hekate.png");
     tAMS = window.loadTexture("gfx/fusee.png");
     tLockpick = window.loadTexture("gfx/lockpick.png");
-    tUdpih = window.loadTexture("gfx/udpih.png");
+    tCustomPayload = window.loadTexture("/switch/Payload Rebooted/payload.png");
 
     // Create rect
     /*rectHekate = { 107, 0, 258, 258};
@@ -80,7 +80,7 @@ void Menu::printMenu()
     vEntityCursor.push_back(Entity (Vector2f(rectTemplate.x, rectTemplate.y), tHekate, 258, 258, 0, 0));
     vEntityCursor.push_back(Entity (Vector2f(rectTemplate.x + rectTemplate.w + 14, rectTemplate.y), tAMS, 258, 258, 0, 0));
     vEntityCursor.push_back(Entity (Vector2f(rectTemplate.x + (rectTemplate.w + 14) * 2, rectTemplate.y), tLockpick, 258, 258, 0, 0));
-    vEntityCursor.push_back(Entity (Vector2f(rectTemplate.x + (rectTemplate.w + 14) * 3, rectTemplate.y), tUdpih, 258, 258, 0, 0));
+    vEntityCursor.push_back(Entity (Vector2f(rectTemplate.x + (rectTemplate.w + 14) * 3, rectTemplate.y), tCustomPayload, 258, 258, 0, 0));
 
     std::cout << "1\n";
     /*CIRCLE BEHIND SMALL ICONS*/
