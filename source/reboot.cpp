@@ -77,7 +77,7 @@ std::string whichPayload(int payload)
     }
 }
 
-void Reboot::rebootNow(int payload) //0 = hekate, 1 = ams, 2 = lockpick, 3 = udpih
+void Reboot::rebootNow(int payload) //0 = hekate, 1 = ams, 2 = lockpick, 3 = custom
 {
     Result rc = splInitialize();
 
