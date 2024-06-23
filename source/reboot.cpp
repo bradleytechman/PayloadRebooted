@@ -72,8 +72,8 @@ std::string whichPayload(int payload)
         return "payload/lockpick.bin";
     }
 
-    else if (payload == 3){
-        return "payload/udpih.bin";
+    else if (payload == 3){   //CUSTOM
+        return "/bootloader/payloads/custom.bin";
     }
 }
 
