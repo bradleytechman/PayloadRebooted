@@ -120,7 +120,6 @@ void Menu::printAbout(){
     SDL_Texture* tSciresM = window.loadString("- SciresM for fusee");
     SDL_Texture* tCTCaer = window.loadString("- CTCaer for hekate");
     SDL_Texture* tshchmue = window.loadString("- shchmue for lockpick");
-    SDL_Texture* tGary = window.loadString("- GaryOderNichts for udpih");
     SDL_Texture* tBradley = window.loadString("- forked by bradleytechman");
     SDL_Texture* tPolo = window.loadString("- created by PoloNX");
     SDL_Texture* tpressA = window.loadString("- PRESS A TO EXIT !");
