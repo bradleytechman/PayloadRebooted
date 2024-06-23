@@ -19,9 +19,6 @@ To build the project you have to download, install devkitpro and follow these co
 ``make  ``  
  
  
- ## Issues 🚩 
- 
-Exit button doesn't work.
 
 ## Credits 📜 
 
