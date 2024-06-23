@@ -134,8 +134,6 @@ void Menu::printAbout(){
     vEntity.push_back(Entity(Vector2f(340, 290), tCTCaer, size.x, size.y , 0, 0));
     size = getsize(tshchmue);
     vEntity.push_back(Entity(Vector2f(340, 320), tshchmue, size.x, size.y , 0, 0));
-    size = getsize(tGary);
-    vEntity.push_back(Entity(Vector2f(340, 410), tGary, size.x, size.y , 0, 0));
     size = getsize(tpressA);
     vEntity.push_back(Entity(Vector2f(340, 350), tpressA, size.x, size.y , 0, 0));
     size = getsize(tPolo);
