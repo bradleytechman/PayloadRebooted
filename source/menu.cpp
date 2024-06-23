@@ -147,12 +147,10 @@ void Menu::printAbout(){
     window.display();
 
     while (isOpen){
-        while (SDL_PollEvent(&eventAbout)){
-            if (eventAbout.type == SDL_JOYBUTTONDOWN){
-                if (ev
-                    entAbout.jbutton.button == 0) //button A
-                {
-                    return;
+       while (SDL_PollEvent(&eventAbout)) {
+    if (eventAbout.type == SDL_JOYBUTTONDOWN) {
+        if (eventAbout.jbutton.button == 0) {  // button A
+            return;
                 }
             }
         }
